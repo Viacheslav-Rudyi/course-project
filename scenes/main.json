@@ -1,0 +1,79 @@
+{
+    "0": {
+        "type": "set background",
+        "sprite": "bg",
+        "next": 12
+    },
+    "12": {
+        "type": "dialogue",
+        "speaker": "speaker 1",
+        "text": [
+            "hello there",
+            "General Kenobi"
+        ],
+        "next": 1
+    },
+    "1": {
+        "type": "choice",
+        "choices": {
+            "say hello": 0,
+            "say goodbye": 2
+        }
+    },
+    "2": {
+        "type": "dialogue",
+        "text": [
+            "this will be the end!"
+        ],
+        "next": 97
+    },
+    "97": {
+        "type": "hide messagebox",
+        "next": 99
+    },
+    "99": {
+        "type": "show sprite",
+        "sprite": "cowboy",
+        "expression": "blue",
+        "properties": {
+            "x": 0.8,
+            "y": 1,
+            "scaleX": 1,
+            "scale": 4
+        },
+        "next": 80
+    },
+    "80": {
+        "type": "wait",
+        "next": 101
+    },
+    "101": {
+        "type": "dialogue",
+        "text": [
+            "this city ain't big enough for 2 cowboys",
+            "imma head out"
+        ],
+        "next": 100
+    },
+    "100": {
+        "type": "hide sprite",
+        "sprite": "cowboy",
+        "next": 102
+    },
+    "102": {
+        "type": "dialogue",
+        "text": [
+            "nuh uh"
+        ],
+        "next": 103
+    },
+    "103": {
+        "type": "show sprite",
+        "sprite": "cowboy",
+        "expression": "red",
+        "properties": {
+            "x": 0.5
+        },
+        "hint": "press LMB to do something"
+    }
+}
